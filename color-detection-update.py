@@ -3,7 +3,7 @@ import numpy as np
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 
-color_detected = 0
+global color_detected
 while(True):
 	camera = PiCamera()
 	camera.resolution = (640,480)
