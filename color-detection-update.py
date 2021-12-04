@@ -3,6 +3,7 @@ import numpy as np
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 
+color_detected = 0
 while(True):
 	camera = PiCamera()
 	camera.resolution = (640,480)
@@ -62,21 +63,19 @@ while(True):
 		if cv2.waitKey(10) & 0xFF == ord('q'):
     			camera.close()
 			if(cv2.countNonZero(red_mask)>0):
-				print('Detected red. Color Wheel:')
-				print('Complimetary color is green. Triadactic colors are blue and yellow. Tetradic colors are blue, red, and orange.')
+				color_detected = 1
 			if(cv2.countNonZero(green_mask)>0):
-				print('Detected green. Color Wheel:')
-				print('Complimetary color is red. Triadactic colors are purple and  orange. Tetradic colors are blue, green, and orange.')
+				color_detected = 2
 			if(cv2.countNonZero(blue_mask)>0):
-				print('Detected blue. Color Wheel:')
+				color_detected = 3
 			if(cv2.countNonZero(yellow_mask)>0):
-				print('Detected yellow. Color Wheel:')
+				color_detected = 4
 			if(cv2.countNonZero(white_mask)>0):
-				print('Detected white.')
+				color_detected = 5
 			if(cv2.countNonZero(black_mask)>0):
-				print('Detected black.')
+				color_detected = 6
 			if(cv2.countNonZero(orange_mask)>0):
-				print('Detected orange.')
+				color_detected = 7
 			if(cv2.countNonZero(violet_mask)>0):
-				print('Detected violet.')
+				color_detected = 8
 				break
