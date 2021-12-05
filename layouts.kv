@@ -1,0 +1,249 @@
+WindowManager:
+    StartingScreen:
+    RedGridLayoutCombos:
+    RedFashionCombinations:
+    GreenGridLayoutCombos:
+    GreenFashionCombinations:
+    BlueGridLayoutCombos:
+    BlueFashionCombinations:
+    YellowGridLayoutCombos:
+    YellowFashionCombinations:
+    VioletGridLayoutCombos:
+    VioletFashionCombinations:
+
+#: import utils kivy.utils
+
+#LayoutForCombos
+
+<StartingScreen>:
+    name:"first"
+
+    GridLayout:
+        cols: 1
+        rows: 5
+
+        Button:
+            text:'Red'
+            on_release:
+                app.root.current = "firstred"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: 'Green'
+            on_release:
+                app.root.current = "firstgreen"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: 'Blue'
+            on_release:
+                app.root.current = "firstblue"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: 'Yellow'
+            on_release:
+                app.root.current = "firstyellow"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: 'Violet'
+            on_release:
+                app.root.current = "firstviolet"
+                root.manager.transition.direction = "left"
+
+<RedGridLayoutCombos>:
+    name: "firstred"
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Complementary Color"
+                font_size: 20
+
+            TextInput:
+                text: "Green"
+
+            Label:
+                text: "Triadactic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Blue and Yellow"
+
+            Label:
+                text: "Tetradic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Blue, Red, and Orange"
+
+        Button:
+            text: "Would you like to see possible fashion combinations with the color?"
+            font_size: 20
+            on_release:
+                app.root.current = "secondred"
+                root.manager.transition.direction = "left"
+
+<RedFashionCombinations>:
+    name: "secondred"
+
+    GridLayout:
+        cols: 3
+        rows: 2
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/3f/2b/fb/3f2bfb537f68ba16d3c1d053d646d16b.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/36/9a/6b/369a6bd7fb2f7f9b195071a9ddfa2f12.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/f2/7a/e7/f27ae7f93779d8c83c959ba811d27bc7.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/f0/65/07/f06507af2c1fa3b7802c57f55ff1be71.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/06/83/42/068342eb2720865bf02d05bbffcac476.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/5f/94/03/5f94036ffd46244e173085abb5ae85ef.jpg'
+            width: 5000
+            allow_stretch: True
+            keep_ratio: False
+
+<GreenGridLayoutCombos>:
+    name: "firstgreen"
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Complementary Color"
+                font_size: 20
+
+            TextInput:
+                text: "Red"
+
+            Label:
+                text: "Triadactic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Purple and Orange"
+
+            Label:
+                text: "Tetradic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Blue and Orange"
+
+        Button:
+            text: "Would you like to see possible fashion combinations with the color?"
+            font_size: 20
+            on_release:
+                app.root.current = "secondgreen"
+                root.manager.transition.direction = "left"
+
+<GreenFashionCombinations>:
+    name: "secondgreen"
+
+    GridLayout:
+        cols: 3
+        rows: 2
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/75/37/0d/75370d550618fc28d8aff41a44240ba6.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/236x/89/00/4e/89004e0504cb63051b1b937c73400286.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/8d/ee/91/8dee9194aaaef6b0613b1fe31a9c8524.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/80/de/13/80de132598acf2b8548500d38fd49e1d.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/7f/19/be/7f19be397b1d4562f28a574e9f4e13b2.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+        AsyncImage:
+            source: 'https://i.pinimg.com/564x/b7/72/ab/b772ab29df752b001ed15eb1905fb4e4.jpg'
+            allow_stretch: True
+            keep_ratio: False
+
+<BlueGridLayoutCombos>:
+    name: "firstblue"
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Complementary Color"
+                font_size: 20
+
+            TextInput:
+                text: "Yellow"
+
+            Label:
+                text: "Triadactic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Purple and Orange"
+
+            Label:
+                text: "Tetradic Colors"
+                font_size: 20
+
+            TextInput:
+                text: "Blue and Orange"
+
+        Button:
+            text: "Would you like to see possible fashion combinations with the color?"
+            font_size: 20
+            on_release:
+                app.root.current = "secondblue"
+                root.manager.transition.direction = "left"
+
+
