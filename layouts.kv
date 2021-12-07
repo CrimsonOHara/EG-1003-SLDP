@@ -13,6 +13,21 @@ WindowManager:
 
 <StartingScreen>:
     name:"first"
+    
+    GridLayout:
+        cols: 1	
+        rows: 1
+
+        Button:
+            text:'Welcome to RBGoggles9000!'
+            font_size: 32
+            on_release:
+                if app.content == '1': app.root.current = "firstred"
+                if app.content == '2': app.root.current = "firstgreen"
+                if app.content == '3': app.root.current = "firstblue"
+                root.manager.transition.direction = "left"
+                
+#Red Layout
 
 <RedGridLayoutCombos>:
     name: "firstred"
@@ -244,5 +259,3 @@ WindowManager:
             source: 'https://i.pinimg.com/564x/2e/75/c7/2e75c71350e01c8310ec8911f1f0596a.jpg'
             allow_stretch: True
             keep_ratio: False
-
-
